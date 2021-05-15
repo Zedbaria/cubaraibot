@@ -4,7 +4,7 @@ module.exports=
     description : "this is a ping command",
     async execute(client,message,args,Discord)
     {
-        if(message.member.roles.caches.has('837306210734571571')||message.member.roles.caches.has('836500837244862514'))
+        if(message.member.roles.caches.has('837306210734571571')/*||message.member.roles.caches.has('836500837244862514')*/)
         {
         if(!args[0])return message.reply("Entre un nombre de messages à supprimer");
         if(isNaN(args[0])) return message.reply("Renseigne un nombre plutôt");
