@@ -20,4 +20,4 @@ client.on('ready',()=>
     memberServeur(client);
 });
 //connexion à la fin
-client.login(process.env.DISCORD_TOKEN);
+client.login(process.env.DJS_KEY);
