@@ -18,5 +18,5 @@ module.exports = async(client)=>
        });
 
         console.log('Updating');
-    },5000);
+    },10000);
 }
