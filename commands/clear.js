@@ -4,7 +4,7 @@ module.exports=
     description : "this is a ping command",
     async execute(client,message,args,Discord)
     {
-        if(message.member.roles.caches.find(role => role.name ==="Modérateur")||message.member.roles.caches.find(role => role.name ==="Admin"))
+        if(message.member.hasPermission("MANAGE_MESSAGES"))
         {
         if(!args[0])return message.reply("Entre un nombre de messages à supprimer");
         if(isNaN(args[0])) return message.reply("Renseigne un nombre plutôt");
