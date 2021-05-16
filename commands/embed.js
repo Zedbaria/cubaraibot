@@ -12,7 +12,7 @@ module.exports=
         .addFields(
             {name :"&count",value : 'compteur des personnes'},
             {name :"&ip",value : 'ip du serveur'},
-            {name :"&live",value : 'lien twitch'},
+            {name :"&twitch",value : 'lien twitch'},
             {name :"&site",value : "site web"},
             {name :"&serveur",value : "status du serveur"},
             {name :"&youtube",value : "lien youtube"}

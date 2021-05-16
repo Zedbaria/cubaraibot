@@ -1,6 +1,6 @@
 module.exports=
 {
-    name:'live',
+    name:'twitch',
     description : "twitch",
     execute(client,message,args,Discord)
     {
