@@ -10,15 +10,15 @@ module.exports=
         .setURL('https://cubaraibe.fr')
         .setDescription('Voici les commandes')
         .addFields(
-            {value : '&count = compteur des personnes'},
-            {value : '&ip = ip du serveur'},
-            {value : '&live = lien twitch'},
-            {value : "&site = site web"},
-            {value : "&serveur = status du serveur"},
-            {value : "&youtube = lien youtube"}
+            {name :"&count",value : 'compteur des personnes'},
+            {name :"&ip",value : 'ip du serveur'},
+            {name :"&live",value : 'lien twitch'},
+            {name :"&site",value : "site web"},
+            {name :"&serveur",value : "status du serveur"},
+            {name :"&youtube",value : "lien youtube"}
         )
-        .setImage("https://img.chefdentreprise.com/Img/BREVE/2020/6/347512/Reglement-interieur-pourquoi-est-crucial--F.jpg")
-        .setFooter("Regardez bien les règles");
+        .setImage("https://i.ibb.co/S33Bkjk/bateaunice.png")
+        .setFooter("Pour profiter au max du serveur discord");
         message.channel.send(newEmbed);
     }
     
