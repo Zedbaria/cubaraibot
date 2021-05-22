@@ -1,7 +1,7 @@
 const util = require('minecraft-server-util');
 module.exports=
 {
-    name:'serveur',
+    name:'serv',
     description : "les informations du serveur minecraft",
     execute(client, message, args, Discord)
     {
