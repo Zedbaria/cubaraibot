@@ -2,6 +2,9 @@ module.exports = {
     name: 'reaction',
     description: "pour se donner des rôles",
     async execute(client, message, args, Discord ){
+       
+        if(message.member.hasPermission("MANAGE_MESSAGES"))
+        {
         const channel = '836500749314818078';
         const verif = message.guild.roles.cache.find(role => role.name ==="Membres");
 
@@ -48,5 +51,9 @@ module.exports = {
             }
         });
     }
- 
+    else
+    {
+        return message.reply("tu n'as pas les permissions nécessaires");
+    }
+}
 }
