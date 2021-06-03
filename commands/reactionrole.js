@@ -9,6 +9,7 @@ module.exports = {
         const annonces = message.guild.roles.cache.find(role => role.name === "Notifs Annonces");
         const events = message.guild.roles.cache.find(role => role.name === "Notifs Events");
         const twitch = message.guild.roles.cache.find(role => role.name === "Notifs Twitch");
+        const barre = message.guild.roles.cache.find(r => r.id === "842708293834899456");
  
         const yellowTeamEmoji = '📜';
         const blueTeamEmoji = '🎉';
@@ -36,13 +37,17 @@ module.exports = {
             if (reaction.message.channel.id == channel) {
                 if (reaction.emoji.name === yellowTeamEmoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.add(annonces);
+                    await reaction.message.guild.members.cache.get(user.id).roles.add(barre);
                 }
                 if (reaction.emoji.name === blueTeamEmoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.add(events);
+                    await reaction.message.guild.members.cache.get(user.id).roles.add(barre);
                 }
                 if (reaction.emoji.name === twitchemoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.add(twitch);
+                    await reaction.message.guild.members.cache.get(user.id).roles.add(barre);
                 }
+                
             } else {
                 return;
             }
@@ -60,13 +65,17 @@ module.exports = {
             if (reaction.message.channel.id == channel) {
                 if (reaction.emoji.name === yellowTeamEmoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.remove(yellowTeamRole);
+                    await reaction.message.guild.members.cache.get(user.id).roles.remove(barre);
                 }
                 if (reaction.emoji.name === blueTeamEmoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.remove(blueTeamRole);
+                    await reaction.message.guild.members.cache.get(user.id).roles.remove(barre);
                 }
                 if (reaction.emoji.name === twitchemoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.remove(twitch);
+                    await reaction.message.guild.members.cache.get(user.id).roles.remove(barre);
                 }
+                
             } else {
                 return;
             }
