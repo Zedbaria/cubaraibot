@@ -8,7 +8,7 @@ module.exports = {
         const teamdbzemoji = '✅';
 
         let embed = new Discord.MessageEmbed()
-            .setColor('#e42643')
+            .setColor('#33cc33')
             .setTitle('Vérification')
             .setDescription('Bonjour à tous, veuillez réagir au message afin de pouvoir accéder au serveur.\n\n');
  
