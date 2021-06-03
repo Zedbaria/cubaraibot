@@ -10,8 +10,7 @@ module.exports = {
         let embed = new Discord.MessageEmbed()
             .setColor('#e42643')
             .setTitle('Vérification')
-            .setDescription('Bonjour à tous, veuillez réagir au message afin de pouvoir accéder au serveur.\n\n'
-                + `${teamdbzemoji} pour vérifier`);
+            .setDescription('Bonjour à tous, veuillez réagir au message afin de pouvoir accéder au serveur.\n\n');
  
         let messageEmbed = await message.channel.send(embed);
         messageEmbed.react(teamdbzemoji);
