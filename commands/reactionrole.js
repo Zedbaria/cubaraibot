@@ -72,9 +72,12 @@ module.exports = {
                 if (reaction.emoji.name === twitchemoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.remove(twitch);
                 }
+                if (reaction.emoji.name != yellowTeamEmoji && reaction.emoji.name != blueTeamEmoji && reaction.emoji.name != twitchemoji)
+                {
+                    await reaction.message.guild.members.cache.get(user.id).roles.remove(barre);
+                }
             } else {
                 
-                await reaction.message.guild.members.cache.get(user.id).roles.remove(barre);
                 return;
 
             }
