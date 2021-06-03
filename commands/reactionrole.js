@@ -64,19 +64,19 @@ module.exports = {
             if (reaction.message.channel.id == channel) {
                 if (reaction.emoji.name === yellowTeamEmoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.remove(annonces);
-                    await reaction.message.guild.members.cache.get(user.id).roles.remove(barre);
                 }
                 if (reaction.emoji.name === blueTeamEmoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.remove(events);
-                    await reaction.message.guild.members.cache.get(user.id).roles.remove(barre);
                     
                 }
                 if (reaction.emoji.name === twitchemoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.remove(twitch);
-                    await reaction.message.guild.members.cache.get(user.id).roles.remove(barre);
                 }
             } else {
+                
+                await reaction.message.guild.members.cache.get(user.id).roles.remove(barre);
                 return;
+
             }
         });
     }
