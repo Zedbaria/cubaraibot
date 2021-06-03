@@ -5,7 +5,7 @@ module.exports = {
        
         if(message.member.hasPermission("MANAGE_MESSAGES"))
         {
-        const channel = '839526471067238472';
+        const channel = '836502970514014269';
         const annonces = message.guild.roles.cache.find(role => role.name === "Notifs Annonces");
         const events = message.guild.roles.cache.find(role => role.name === "Notifs Events");
         const twitch = message.guild.roles.cache.find(role => role.name === "Notifs Twitch");
