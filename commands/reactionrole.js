@@ -3,8 +3,7 @@ module.exports = {
     description: "pour se donner des rôles",
     async execute(client, message, args, Discord ){
        
-        if(message.member.hasPermission("MANAGE_MESSAGES"))
-        {
+       
         const channel = '839526471067238472';
         const annonces = message.guild.roles.cache.find(role => role.name === "Notifs Annonces");
         const events = message.guild.roles.cache.find(role => role.name === "Notifs Events");
@@ -79,10 +78,6 @@ module.exports = {
 
             }
         });
-    }
-    else
-    {
-        return message.reply("tu n'as pas les permissions nécessaires");
-    }
+    
 }
 }
