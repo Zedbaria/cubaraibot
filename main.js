@@ -17,13 +17,7 @@ client.events = new Discord.Collection();
 client.on('ready',()=>
 {
     memberCounter(client);
-    client.user.setPresence({
-        status: "online",  //You can show online, idle....
-        game: {
-            name: "PLAY.CUBARAIBE.FR",  //The message shown
-            type: "PLAYING" //PLAYING: WATCHING: LISTENING: STREAMING:
-        }
-    });
+    client.user.setActivity("PLAY.CUBARAIBE.FR", { type: "PLAYING"})
     /*memberServeur(client);*/
 });
 //connexion à la fin
